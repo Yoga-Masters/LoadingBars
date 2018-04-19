@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<style type = "text/css">
+    .ldBar-label{
+        color: red;
+        font-size:25px;
+        font-weight: bold;
+    }
+</style>
+<div 
+id = "warrior"
+class= "ldBar label-center"
+data-type="fill"
+data-img="warriorii.png"
+data-img-size="100,100"
+
+></div>
+<div 
+id = "tree"
+class = "ldBar label-center"
+data-type="fill"
+data-img="tree.png"
+data-img-size="100,100"
+
+></div>
+<div
+id = "triangle"
+class = "ldBar label-center"
+data-type="fill"
+data-img="triangle.png"
+data-img-size="100,100"
+
+></div>
+<script type="text/javascript" src="loading-bar.js"></script>
+<script type="text/javascript">
+var interval = 5;
+var myInterval = setInterval(function(){
+    if (interval == 100){
+          stopInterval();
+      }
+      var warrior = document.getElementById("warrior").ldBar;
+      var tree = document.getElementById("tree").ldBar;
+      var triangle = document.getElementById("triangle").ldBar;
+      warrior.set(interval);
+      tree.set(interval);
+      triangle.set(interval);
+      interval = interval + 5;
+      
+    }, 1000);
+    function stopInterval(){
+        clearInterval(myInterval);
+    }
+</script>
